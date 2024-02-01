@@ -78,3 +78,7 @@ a{
   display: flex;
   gap: 4px
 }
+
+.main{
+  display: flex;
+}
