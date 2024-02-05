@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Tahoma, sans-serif;
+    width: 100vh;
+    justify-content: start;
+
+}
+button{
+    background-color: aqua;
+    height: 50px;
+}
