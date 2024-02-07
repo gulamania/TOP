@@ -34,45 +34,54 @@ function evaluateRound(computerChoice, playerChoice){
     }
 };
 
+function playRound(playerChoice){
+    let computerChoice = getComputerChoice();
+    let result =  evaluateRound(computerChoice, playerChoice);
+    return result
+}
+
+/* 1. Create score variables and put them into webpage
+   2. Change playRound to run from a given player choice.
+   3. Add play round to newly created event listeners for the buttons.  
+*/
+
+let playerScore = 0;
+let computerScore = 0;
+
+const scores = document.querySelector('.scores');
+scores.textContent = "You have " + playerScore + " points. The computer has " + computerScore + " points";
+
+const roundResult = document.querySelector('.roundResult');
+
+const test = document.querySelector('#checking')
+//const rock = document.querySelector('#rock');
+
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        let 
+        let playerChoice = cleanPlayerChoice(button.id);
+        let result = playRound(playerChoice);
+        if (result.includes("Win")){
+            playerScore += 1;
+        } else if (result.includes("Lose")){
+            computerScore += 1;
+        };
+        roundResult.textContent = result;
+        scores.textContent = "You have " + playerScore + " points. The computer has " + computerScore + " points";
     });
 });
 
-
-/*function playRound(computerScore, playerScore){
-    let playerChoice = cleanPlayerChoice(prompt("rock paper or scissors?"));
-    let computerChoice = getComputerChoice();
-    let result =  evaluateRound(computerChoice, playerChoice);
-    console.log(result)
-    if (result.includes("Win")){
-        playerScore =+ 1;
-    } else if (result.includes("Lose")){
-        computerScore =+ 1;
-    }
-    console.log("The computer has " + computerScore + " points while you have " + playerScore + " points") 
-    return [computerScore, playerScore]
-}
-
-function playGame(){
-    // No loops bcs odin project doesn't want you to use them TT
-    let computerScore = 0;
-    let playerScore = 0;
-    let result = playRound(computerScore, playerScore)
-    computerScore = result[0]
-    playerScore = result[1]
-    result = playRound(computerScore, playerScore)
-    computerScore = result[0]
-    playerScore = result[1]
-    result = playRound(computerScore, playerScore)
-    computerScore = result[0]
-    playerScore = result[1]
-    result = playRound(computerScore, playerScore)
-    computerScore = result[0]
-    playerScore = result[1]
-    result = playRound(computerScore, playerScore)
-}
-
-playGame()*/
+/*
+rock.addEventListener('click', () => {
+    let playerChoice = cleanPlayerChoice(rock.id);
+        let result = playRound(playerChoice);
+        if (result.includes("Win")){
+            playerScore += 1;
+        } else if (result.includes("Lose")){
+            computerScore +=1;
+        };
+        roundResult.textContent = result;
+        scores.textContent = "You have " + playerScore + " points. The computer has " + computerScore + " points";
+        test.textContent = rock.id;
+});
+*/
