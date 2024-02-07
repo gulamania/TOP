@@ -1,0 +1,20 @@
+.bigContainer, .rowContainer{
+    display: flex;
+}
+
+.bigContainer{
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.rowContainer{
+    width: 100vw;
+    flex: auto;
+}
+
+.cell{
+    flex: auto;
+    border-style: solid;
+    height: 100px;
+}
