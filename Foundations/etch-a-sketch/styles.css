@@ -1,20 +1,16 @@
-.bigContainer, .rowContainer{
-    display: flex;
+.body{
+    padding: 0px;
+    margin: 0px;
 }
 
 .bigContainer{
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-}
-
-.rowContainer{
-    width: 100vw;
-    flex: auto;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cell{
-    flex: auto;
     border-style: solid;
-    height: 100px;
+    border-width: 2px;
+    flex: auto;
 }
