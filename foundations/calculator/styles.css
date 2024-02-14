@@ -1,0 +1,39 @@
+.calculatorContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    height: 400px;
+    width: 400px;
+}
+
+.display{
+    background-color: rgba(191, 221, 146, 0.305);
+    height: 300;
+    flex: 1;
+    padding: 50px;
+    font-family: monospace;
+    font-size: 20px;
+    color: rgb(49, 55, 51);
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.operatorButtonContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.digitButtonContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digitButton, .operatorButton{
+    min-width: 70px;
+    min-height: 50px;
+}
+
+
