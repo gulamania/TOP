@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="imageSidebar">
+        <div class="sidebarPane">
+            <img src="Assets/odin-lined.png" alt="Logo">
+            ODIN
+        </div>
+        <div class="imageCaption">
+            Photo by <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie West</a>
+            on <a href="https://unsplash.com/">Unsplash.</a>
+            Logo from the <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form">Sign-up Form Lesson</a> 
+            at <a href="https://www.theodinproject.com/">The Odin Project</a> 
+        </div>
+    </div>
+    <div class="mainPanel">
+        <div class="headBlurb">
+            This is not a real online service. But you know deep down that you need to sign-up. Signing up will bring you meaning, peace, and happiness. 
+        </div>
+        <form action="">
+            <div class="formContainer">
+                <legend>Let's do This!</legend>
+                <div class="inputSuperContainer">
+                    <div class="inputContainer">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="text" pattern="(\d{10})" id="phone-number" name="phone-number">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="password">PASSWORD</label>
+                        <input class="error" type="password" id="password" name="password">
+                        <div>*Passwords do not match</div>
+                    </div>
+                    <div class="inputContainer">
+                        <label for="password-copy">REPEAT PASSWORD</label>
+                        <input class="error" type="password" id="password-copy" name="password-copy">
+                    </div>
+                </div>
+            </div>
+            <div class="createAccContainer">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a>Log in</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
