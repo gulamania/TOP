@@ -32,3 +32,23 @@ table :first-child{
 table :last-child{
     border-right: 0px;
 }
+
+.Xhover{
+    color: rgba(255, 0, 0, 0.50);
+}
+
+.Ohover{
+    color: rgba(0, 0, 255, 0.50);
+}
+
+.X{
+    color: red;
+}
+
+.O{
+    color: blue;
+}
+
+.win{
+    background-color: green;
+}
